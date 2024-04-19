@@ -1,0 +1,47 @@
+@import "src/app/fs-styles/variables/color.scss";
+@import "src/app/fs-styles/mixins/generalText.scss";
+.banner-color {
+  height: 7rem;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(#11558e, 1) 55%,
+    rgba(72, 159, 151, 1)
+  );
+}
+
+h4 {
+  text-transform: uppercase;
+  @include titleSectionHome();
+}
+h5 {
+  padding: 1rem 0;
+  @include titleContact();
+}
+
+h6 {
+  line-height: 2rem;
+  @include textgeneral();
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #11558e;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(
+    to right,
+    rgba(#11558e, 1) 55%,
+    rgba(72, 159, 151, 1)
+  );
+}
+.form-control::placeholder {
+  color: #acb0b2;
+}
+
+input {
+  border: 1px solid #11558e;
+}

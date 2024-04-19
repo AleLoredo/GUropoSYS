@@ -1,0 +1,74 @@
+<div id="banners" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div
+      *ngFor="let banner of banners; let i = index"
+      class="carousel-item"
+      [class.active]="i === 0"
+    >
+      <!-- Imagen para pantallas grandes (lg) -->
+      <div class="d-none d-sm-block">
+        <img
+          src="{{ banner.img }}"
+          style="
+            width: 100%;
+            height: 60vh;
+            object-fit: cover;
+            object-position: center;
+          "
+          alt="Maintenance Image"
+        />
+      </div>
+
+      <!-- Imagen para pantallas pequeñas (sm) -->
+      <div class="d-block d-sm-none">
+        <img
+          src="{{ banner.img }}"
+          style="
+            width: 100%;
+            height: 65vh;
+            object-fit: cover;
+            object-position: center;
+          "
+          alt="Maintenance Image"
+        />
+      </div>
+    </div>
+
+    <ol class="carousel-indicators">
+      <li
+        *ngFor="let banner of banners; let i = index"
+        data-bs-target="#banners"
+        [attr.data-bs-slide-to]="i"
+        [class.active]="i === 0"
+      ></li>
+    </ol>
+
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#banners"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#banners"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div class="banner-color d-flex d-block align-items-center justify-content-center">
+    <!-- <h4>Titulo descriptivo con info corta</h4> -->
+    <div class="container m-4 d-block">
+      <h4 style="text-transform: none;">
+        Realizamos trabajos de herrería de obra, mantenimiento, parada de
+        plantas, tanques, equipo, estructuras, piping y obra civil.
+      </h4>
+    </div>
+  </div>
+</div>

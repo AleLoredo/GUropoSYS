@@ -1,0 +1,16 @@
+$font-family: Inter;
+$font-size-title: 0.85rem;
+$font-size-subtitle: 1.25rem;
+
+.title-cards {
+  font-size: $font-size-title;
+  font-family: Inter;
+  font-weight: 500;
+  color: #848484;
+}
+.subtitle-cards {
+  font-size: $font-size-subtitle;
+  font-family: Inter;
+  font-weight: 600;
+  color: #303031;
+}

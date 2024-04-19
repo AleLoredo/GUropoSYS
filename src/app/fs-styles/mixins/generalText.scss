@@ -1,0 +1,24 @@
+@import "src/app/fs-styles/variables/color.scss";
+
+@mixin titleNavbar() {
+  color: $primary !important;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+@mixin titleSectionHome() {
+  color: $white;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+@mixin textgeneral() {
+  color: $black-1;
+  font-size: 100%;
+}
+
+@mixin titleContact() {
+  color: $primary !important;
+  font-size: 1rem;
+  font-weight: 600;
+}

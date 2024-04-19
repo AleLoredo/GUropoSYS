@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="break p-3"></div>
+  <div class="d-flex p-1 flex-column align-items-center">
+    <h4 class="p-1">Nuestros clientes</h4>
+   
+  </div>
+</div>
+<!-- <div class="container py-4">
+  <p-carousel
+    [value]="clients"
+    [numVisible]="3"
+    [numScroll]="1"
+    [responsiveOptions]="responsiveOptions"
+    [autoplayInterval]="5000"
+    [showIndicators]="false"
+    [circular]="true"
+  >
+    <ng-template let-item pTemplate="item">
+      <img
+        style="
+          object-fit: cover;
+          margin-left: 1.5rem;
+          height: 8rem;
+          width: auto;
+        "
+        [src]="item.image"
+        alt="hola"
+      />
+    </ng-template>
+  </p-carousel>
+</div>
+ -->
+<div class="container py-4">
+  <p-carousel
+    [value]="clients"
+    [numVisible]="3"
+    [numScroll]="1"
+    [showIndicators]="false"
+    [responsiveOptions]="responsiveOptions"
+    [autoplayInterval]="5000"
+    [circular]="true"
+  >
+    <ng-template let-item pTemplate="item">
+      <div class="gs-brands__card">
+        <img
+          class="gs-brands__card-wrapper-image"
+          [src]="item.image"
+          alt="Clientes"
+        />
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>

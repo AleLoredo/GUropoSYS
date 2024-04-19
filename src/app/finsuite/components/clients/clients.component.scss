@@ -1,0 +1,33 @@
+@import "src/app/fs-styles/variables/color.scss";
+@import "src/app/fs-styles/mixins/generalText.scss";
+h4 {
+  color: $secondary !important;
+  text-transform: uppercase;
+  @include titleSectionHome();
+}
+.break {
+  width: 100%;
+  border-bottom: 2px solid #e5e5e563;
+}
+
+.gs-brands {
+  &__card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    margin: 0.5rem;
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 8rem;
+      width: auto;
+      padding: 1.37rem;
+      &-image {
+        height: 6rem;
+        width: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+@import "src/app/fs-styles/variables/color.scss";
+@import "src/app/fs-styles/mixins/generalText.scss";
+h6 {
+  color: $secondary !important;
+}
+.break {
+  width: 100%;
+  border-bottom: 2px solid #e5e5e563;
+}
+
+.view {
+  &__title {
+    @include titleNavbar();
+  }
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: top 1s cubic-bezier(0.8, 0, 0, 1);
+}
+.navbar li {
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: "";
+  width: 5rem;
+  height: 0.5rem;
+  background: linear-gradient(
+    to right,
+    rgb(17, 85, 142) 55%,
+    rgb(72, 159, 151)
+  );
+  background-clip: padding-box, border-box;
+  display: block;
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-link::after {
+  content: "";
+  width: 0;
+  height: 0.5rem;
+  background: linear-gradient(
+    to right,
+    rgb(17, 85, 142) 55%,
+    rgb(72, 159, 151)
+  );
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  transition: width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.nav-link {
+  position: relative;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+.navbar-toggler:hover .navbar-toggler-icon {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+.navbar-toggler:active,
+.navbar-toggler:focus {
+  border-color: transparent !important;
+  outline: none;
+  box-shadow: none;
+}
+.offcanvas-end {
+  max-width: 200px;
+}
+a {
+  text-decoration: none;
+  color: $secondary !important;
+}

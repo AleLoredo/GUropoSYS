@@ -1,0 +1,41 @@
+@import "src/app/fs-styles/variables/color.scss";
+@import "src/app/fs-styles/mixins/generalText.scss";
+.bg-banner {
+  background-color: #ffffff;
+}
+
+h3 {
+  color: $secondary !important;
+  @include titleSectionHome();
+}
+h4 {
+  background: none;
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-align: center;
+  color: $white;
+}
+
+::ng-deep .p-carousel .p-carousel-content .p-carousel-next,
+::ng-deep .p-carousel .p-carousel-content .p-carousel-prev {
+  height: 3.5rem;
+  color: #000000 !important;
+  background: transparent;
+  border-radius: 50%;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.carousel-control-prev-icon {
+  background-image: url("/assets/icons/arrows/arrow-left.svg");
+}
+.carousel-control-next-icon {
+  background-image: url("/assets/icons/arrows/arrow-right.svg");
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  height: 3.5rem;
+  width: 1.5rem;
+  color: #000000 !important;
+  border-radius: 50%;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+}

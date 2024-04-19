@@ -1,0 +1,196 @@
+<app-navbar class="d-none d-lg-block"></app-navbar>
+
+<nav
+  class="navbar navbar-expand-lg"
+  [ngClass]="{ sticky: isSticky }"
+  style="background: #ffffff"
+>
+  <div class="container py-4 d-flex justify-content-between align-items-center">
+    <a class="navbar-brand d-none d-sm-block" href="#">
+      <img
+        style="object-fit: cover; max-height: 3.5rem;"
+        src="assets/img/navbar/logo_gruposys.webp"
+        alt=""
+      />
+    </a>
+
+    <a class="navbar-brand d-block d-sm-none" href="#">
+      <img
+        style="object-fit: cover; height: 2rem"
+        src="assets/img/navbar/logo_gruposys.webp"
+        alt=""
+      />
+    </a>
+
+    <!-- Mostrar los enlaces de navegación directamente en la barra de navegación -->
+    <div class="d-none d-lg-block">
+      <ul class="navbar-nav">
+        <li class="nav-item mx-3">
+          <a
+            class="nav-link view__title"
+            [ngClass]="{ active: activeLink === 'home' }"
+            (click)="activateLink('home'); scrollToSection('home')"
+            href="javascript:void(0)"
+            >Inicio</a
+          >
+        </li>
+        <li class="nav-item mx-3">
+          <a
+            class="nav-link view__title"
+            [ngClass]="{ active: activeLink === 'company' }"
+            (click)="activateLink('company'); scrollToSection('company')"
+            href="javascript:void(0)"
+            >Empresa</a
+          >
+        </li>
+        <li class="nav-item mx-3">
+          <a
+            class="nav-link view__title"
+            [ngClass]="{ active: activeLink === 'service' }"
+            (click)="activateLink('service'); scrollToSection('service')"
+            href="javascript:void(0)"
+            >Servicios</a
+          >
+        </li>
+        <li class="nav-item mx-3">
+          <a
+            class="nav-link view__title"
+            [ngClass]="{ active: activeLink === 'contact' }"
+            (click)="activateLink('contact'); scrollToSection('contact')"
+            href="javascript:void(0)"
+            >Contacto</a
+          >
+        </li>
+      </ul>
+    </div>
+    <!-- Botón de menú desplegable para pantallas medianas (md) -->
+    <button
+      class="navbar-toggler d-lg-none"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasRight"
+      aria-controls="offcanvasRight"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Menú desplegable para pantallas medianas (md) -->
+<div
+  class="offcanvas offcanvas-end"
+  tabindex="-1"
+  id="offcanvasRight"
+  aria-labelledby="offcanvasRightLabel"
+>
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel"></h5>
+    <button
+      type="button"
+      class="btn-close text-reset"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li class="nav-item mx-3">
+        <a
+          class="nav-link view__title"
+          [ngClass]="{ active: activeLink === 'home' }"
+          (click)="activateLink('home'); scrollToSection('home')"
+          href="javascript:void(0)"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+          >Inicio</a
+        >
+      </li>
+      <li class="nav-item mx-3">
+        <a
+          class="nav-link view__title"
+          [ngClass]="{ active: activeLink === 'company' }"
+          (click)="activateLink('company'); scrollToSection('company')"
+          href="javascript:void(0)"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+          >Empresa</a
+        >
+      </li>
+      <li class="nav-item mx-3">
+        <a
+          class="nav-link view__title"
+          [ngClass]="{ active: activeLink === 'service' }"
+          (click)="activateLink('service'); scrollToSection('service')"
+          href="javascript:void(0)"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+          >Servicios</a
+        >
+      </li>
+      <li class="nav-item mx-3">
+        <a
+          class="nav-link view__title"
+          [ngClass]="{ active: activeLink === 'contact' }"
+          (click)="activateLink('contact'); scrollToSection('contact')"
+          href="javascript:void(0)"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+          >Contacto</a
+        >
+      </li>
+    </ul>
+    <!--    <ul>
+      <div class="d-flex align-items-center m-3">
+        <img src="assets/icons/top-nav/phone.png" alt="" />
+        <h6 class="ml-2">
+          <a href="https://wa.me/541147555661" target="_blank"
+            >+54 (011) 4755-5661</a
+          >
+        </h6>
+      </div>
+      <div class="break"></div>
+      <div class="d-flex align-items-center m-3">
+        <img src="assets/icons/top-nav/wpp.png" alt="" />
+        <h6 class="ml-2">
+          <a href="https://wa.me/541160679229" target="_blank"
+            >+54 (011) 6067-9229</a
+          >
+        </h6>
+      </div>
+      <div class="break"></div>
+
+      <button
+        class="d-flex align-items-center m-3"
+        style="border: none; background: none"
+        (click)="abrirClienteCorreo()"
+      >
+        <img src="assets/icons/top-nav/email.png" alt="" />
+        <h6 class="ml-2">info@gruposysconstrucciones.com.ar</h6>
+      </button>
+
+        <div class="break"></div>
+        <div class="d-flex align-items-center m-3">
+        <img src="assets/icons/top-nav/ubication.png" alt="" />
+        <h6>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Hipólito+Irigoyen+4140,+San+Martín,+Prov.+de+Bs.+As,+Argentina"
+            target="_blank"
+            >Hipólito Irigoyen 4140, San Martín, Prov. de Bs. As, Argentina</a
+          >
+        </h6>
+      </div> 
+    </ul> -->
+  </div>
+</div>
+
+<app-home id="home" class="section"></app-home>
+
+<app-clients></app-clients>
+
+<app-company id="company" class="section"></app-company>
+
+<app-service id="service" class="section">Service</app-service>
+
+<app-contact id="contact" class="section">Contact</app-contact>
+
+<app-footer></app-footer>

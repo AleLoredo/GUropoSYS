@@ -1,0 +1,14 @@
+@import "src/app/fs-styles/variables/color.scss";
+@import "src/app/fs-styles/mixins/generalText.scss";
+
+.break {
+  width: 100%;
+  border-bottom: 2px solid #e5e5e563;
+}
+h6 {
+  color: $secondary !important;
+}
+a {
+  text-decoration: none;
+  color: $secondary !important;
+}
