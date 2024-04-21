@@ -102,50 +102,50 @@
           <script type="text/javascript">
             emailjs.init("tu-public-key");
           </script>
-          <!--       <form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
+          <form (submit)="sendEmail($event)" [formGroup]="contactForm">
             <div>
               <div class="form-group pb-3">
                 <input
+                  id="name"
                   type="text"
                   class="form-control"
-                  id="name"
                   name="name"
+                  autocomplete="name"
+                  placeholder="Nombre"
                   required
                   formControlName="name"
-                  placeholder="Nombre"
                 />
               </div>
               <div class="form-group pb-3">
                 <input
+                  id="email"
                   type="email"
                   class="form-control"
-                  id="email"
-                  name="email"
+                  autocomplete="email"
+                  placeholder="Email"
                   required
                   formControlName="email"
-                  placeholder="Correo electrónico"
                 />
               </div>
               <div class="form-group pb-3">
                 <input
                   type="text"
                   class="form-control"
-                  id="phone"
                   name="phone"
-                  required
-                  formControlName="phone"
+                  id="phone"
+                  autocomplete="phone"
                   placeholder="Teléfono"
+                  formControlName="phone"
                 />
               </div>
-              <div class="form-group pb-3">
+              <div class="form-group pb-2">
                 <textarea
-                  type="text"
                   class="form-control"
-                  id="message"
+                  style="height: 170px; border: 1px solid #11558e"
+                  placeholder="Mensaje"
                   name="message"
                   required
                   formControlName="message"
-                  placeholder="Mensaje"
                 ></textarea>
               </div>
             </div>
@@ -157,24 +157,17 @@
               class="button button-send"
               style="color: #ffffff; border: none"
               name="submit"
+              [disabled]="!contactForm.valid"
             >
               Enviar
             </button>
-          </form> -->
-
-          <form (submit)="sendEmail($event)">
-            <!-- Aquí van los campos del formulario -->
-            <input type="text" name="name" placeholder="Nombre" required />
-            <input type="tel" name="phone" placeholder="Teléfono" required />
-            <input
-              type="email"
-              name="email"
-              placeholder="Correo electrónico"
-              required
-            />
-            <textarea name="message" placeholder="Mensaje" required></textarea>
-            <button type="submit">Enviar</button>
           </form>
+          <div *ngIf="showSuccessMessage" class="success-message">
+            Mensaje enviado exitosamente!
+          </div>
+          <div *ngIf="showErrorMessage" class="error-message">
+            Error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.
+          </div>
         </div>
       </div>
     </div>

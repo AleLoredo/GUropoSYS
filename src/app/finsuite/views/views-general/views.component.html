@@ -8,7 +8,7 @@
   <div class="container py-4 d-flex justify-content-between align-items-center">
     <a class="navbar-brand d-none d-sm-block" href="#">
       <img
-        style="object-fit: cover; max-height: 3.5rem;"
+        style="object-fit: cover; max-height: 3.5rem"
         src="assets/img/navbar/logo_gruposys.webp"
         alt=""
       />
@@ -97,7 +97,6 @@
       <li class="nav-item mx-3">
         <a
           class="nav-link view__title"
-          [ngClass]="{ active: activeLink === 'home' }"
           (click)="activateLink('home'); scrollToSection('home')"
           href="javascript:void(0)"
           data-bs-dismiss="offcanvas"
@@ -108,7 +107,6 @@
       <li class="nav-item mx-3">
         <a
           class="nav-link view__title"
-          [ngClass]="{ active: activeLink === 'company' }"
           (click)="activateLink('company'); scrollToSection('company')"
           href="javascript:void(0)"
           data-bs-dismiss="offcanvas"
@@ -119,7 +117,6 @@
       <li class="nav-item mx-3">
         <a
           class="nav-link view__title"
-          [ngClass]="{ active: activeLink === 'service' }"
           (click)="activateLink('service'); scrollToSection('service')"
           href="javascript:void(0)"
           data-bs-dismiss="offcanvas"
@@ -130,7 +127,6 @@
       <li class="nav-item mx-3">
         <a
           class="nav-link view__title"
-          [ngClass]="{ active: activeLink === 'contact' }"
           (click)="activateLink('contact'); scrollToSection('contact')"
           href="javascript:void(0)"
           data-bs-dismiss="offcanvas"
