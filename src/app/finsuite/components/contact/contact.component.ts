@@ -33,7 +33,7 @@ export class ContactComponent {
 }
  */ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact',
@@ -61,10 +61,10 @@ export class ContactComponent {
 
     emailjs
       .sendForm(
-        'service_6d4gviy',
-        'template_ss7p0pa',
+        'service_pfz9ylh',
+        'template_hipduai',
         e.target as HTMLFormElement,
-        'JmdKjmBFJupfoOzOk'
+        'pQzad0TtjDB_ChrU6'
       )
       .then(
         (response: EmailJSResponseStatus) => {

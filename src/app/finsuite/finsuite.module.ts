@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { FinsuiteRoutingModule } from './finsuite-routing.module';
 import { ViewsComponent } from './views/views-general/views.component';
 import { CarouselModule } from 'primeng/carousel';
@@ -30,7 +29,6 @@ import { PlantMaintenanceComponent } from './components/section-services/plant-m
 import { TanksComponent } from './components/section-services/tanks/tanks.component';
 import { WorkStructuresComponent } from './components/section-services/work-structures/work-structures.component';
 import { CivilWorkComponent } from './components/section-services/civil-work/civil-work.component';
-import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -53,10 +51,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatBottomSheetModule,
     FinsuiteRoutingModule,
     ReactiveFormsModule,
-    TranslateModule,
     GalleriaModule,
     FormsModule,
-    ReactiveFormsModule,
     CarouselModule,
     MatCheckboxModule,
     SkeletonModule,
@@ -68,8 +64,7 @@ import { HttpClientModule } from '@angular/common/http';
     ChartModule,
     MatTreeModule,
     MatTooltipModule,
-    HttpClientModule,
   ],
-  providers: [TranslateService, Store],
+  providers: [Store],
 })
 export class FinsuiteModule {}
