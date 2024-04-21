@@ -1,5 +1,12 @@
 # Gruposys
 
+Para ejecutar este proyecto en VSC:
+npm install --force
+npm install @emailjs/browser --legacy-peer-deps
+
+El formulario de contacto utiliza EmailJS bajo la cuenta "info" del dominio.
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.1.
 
 ## Development server
