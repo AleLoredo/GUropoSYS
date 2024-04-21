@@ -27,6 +27,8 @@ h4 {
       &-image {
         height: 6rem;
         width: auto;
+        object-fit: cover;
+        object-position: center;
       }
     }
   }
