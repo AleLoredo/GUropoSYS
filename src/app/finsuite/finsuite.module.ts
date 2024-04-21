@@ -30,6 +30,7 @@ import { PlantMaintenanceComponent } from './components/section-services/plant-m
 import { TanksComponent } from './components/section-services/tanks/tanks.component';
 import { WorkStructuresComponent } from './components/section-services/work-structures/work-structures.component';
 import { CivilWorkComponent } from './components/section-services/civil-work/civil-work.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { CivilWorkComponent } from './components/section-services/civil-work/civ
     TranslateModule,
     GalleriaModule,
     FormsModule,
+    ReactiveFormsModule,
     CarouselModule,
     MatCheckboxModule,
     SkeletonModule,
@@ -66,6 +68,7 @@ import { CivilWorkComponent } from './components/section-services/civil-work/civ
     ChartModule,
     MatTreeModule,
     MatTooltipModule,
+    HttpClientModule,
   ],
   providers: [TranslateService, Store],
 })
